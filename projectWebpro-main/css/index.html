@@ -1,0 +1,296 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="uft-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <div class="colse-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="menu">
+            <div class="item"><a href="../index.html"><i class="fa-solid fa-house"></i>Introduction</a></div>
+            <div class="item"><a href="../programming/index.html"><i class="fa-solid fa-code-branch"></i>Programming Language</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>HTML<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../index.html"><i class="sub-item">What is HTML?</i></a>
+                    <a href="../sencha/index.html"><i class="sub-item">Sencha Touch</i></a>
+                    <a href="../foundation/index.html"><i class="sub-item">Foundation</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>CSS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../css/index.html"><i class="sub-item">What is CSS?</i></a>
+                    <a href="../bootstrap/index.html"><i class="sub-item">Bootstrap</i></a>
+                    <a href="../pure/index.html"><i class="sub-item">Pure</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>JS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../js/index.html"><i class="sub-item">What is JS?</i></a>
+                    <a href="../agular/index.html"><i class="sub-item">Angular</i></a>
+                </div>
+            </div>
+            <div class="item"><a href="../link/index.html"><i class="fa-solid fa-link"></i>Link References</a></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            $('.menu-btn').click(function () {
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css('visibility', 'hidden');
+            });
+
+            $('.colse-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css('visibility', 'visible');
+            });
+
+        });
+    </script>
+
+    <section class="main flex flex-col space-y-8">
+        <div class="flex justify-center">
+            <a href="../index.html" class="m-4 bg-black text-white font-bold py-2 px-4 rounded  duration-200 hover:bg-gray-400">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        <h1 class="text-6xl flex justify-center" style="color: rgb(0, 0, 0);"><b>What is CSS?</b></h1>
+
+        <div class="mt-10 max-w-lg mx-auto">
+            <div class="bg-gray-200 p-4 sm:p-8 rounded-lg">
+                <p class="leading-7 text-slate-500 text-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            CSS stands for Cascading Style Sheets. This programming language dictates how the
+                            HTML elements of a website should actually appear on the frontend of the page.
+                        </font>
+                    </font>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 mx-auto">
+            <div class="p-6">
+                <div class="max-w-lg mx-auto">
+                    <div class="p-4 sm:p-8 rounded-lg">
+                        <p class="leading-9 text-slate-600">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    Whereas HTML was the basic structure of your website, CSS is what gives your
+                                    entire
+                                    website its style. Those slick colors, interesting fonts, and background images?
+                                    All
+                                    thanks to CSS. This language affects the entire mood and tone of a web page,
+                                    making it
+                                    an incredibly powerful tool -- and an important skill for web developers to
+                                    learn.
+                                    It&#39;s
+                                    also
+                                    what allows websites to adapt to different screen sizes and device types.
+                                </font>
+                            </font>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-5">
+                <img src="carbon.png" class="mx-auto" style="width: 350px;">
+            </div>
+        </div>
+
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);">Why to Learn CSS?</h2>
+
+        <div class="mt-10 max-w-lg mx-auto">
+            <div class="p-4 sm:p-8 rounded-lg">
+
+                <ol class="relative border-s border-gray-200 dark:border-gray-700">
+                    <li class="mb-10 ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-600">Create Stunning Web site</h3>
+                        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-500">CSS handles the look and
+                            feel part of a web page. Using CSS,
+                            you can control the color of the text, the style of fonts, the spacing between paragraphs,
+                            how columns are sized and laid out,
+                            what background images or colors are used, layout designs,variations in display for
+                            different devices and screen sizes as well as a variety of other effects.</p>
+                    </li>
+                    <li class="mb-10 ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-600">Become a web designer</h3>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-500">If you want to start a carrer
+                            as a professional web designer,
+                            HTML and CSS designing is a must skill.
+                        </p>
+                    </li>
+                    <li class="mb-10 ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-600">Control web</h3>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-500">
+                            CSS is easy to learn and understand but it provides powerful control over the presentation
+                            of an HTML document. Most commonly,
+                            CSS is combined with the markup languages HTML or XHTML.
+                        </p>
+                    </li>
+                    <li class="ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-600">Learn other languages</h3>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-500">Once you understands the basic
+                            of HTML and CSS then other related
+                            technologies like javascript, php, or angular are become easier to understand.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);">Prerequisites</h2>
+
+        <div class="mt-10 max-w-5xl mx-auto">
+            <div class="bg-gray-200 p-4 sm:p-8 rounded-lg">
+                <p class="leading-7 text-slate-500 text-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Don't worry, you really don't need to be a computer geek to learn CSS. 
+                            <br>It's very easy styling and presentational language which anyone can learn on the go. You simply needs to be familiar with:
+                        </font>
+                    </font>
+                </p>
+            </div>
+        </div>
+
+        <ul class="space-y-4 text-left text-gray-600 dark:text-gray-600 mx-auto">
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <span>Basic word processing using any text editor.</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <span>How to create directories and files.</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <span>How to navigate through different directories.</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <span>Internet browsing using popular browsers like Internet Explorer or Firefox.</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <span>Developing simple Web Pages using HTML or XHTML.</span>
+            </li>
+            
+        </ul>
+
+        <br>
+
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);"><b>Framework</b></h2>
+
+        <div class="flex justify-center">
+            
+
+            <div id="fw-html" class="grid grid-cols-2 gap-8">
+                <div>
+                    <div class="h-60 w-60 p-4 sm:p-8 rounded-full border border-1 text-center overflow-hidden">
+                        <div class="font-inter font-extrabold text-2xl text-gray-600 tracking-wide flex justify-center">
+                            Bootstrap
+                        </div>
+                        <img src="bootstrap.svg" class="image-programming max-w-lg mx-auto mt-5 w-40 h-30">
+                        <!-- <div class="flex justify-center">
+                        <button class="mt-7 bg-gray-800 text-white font-bold py-2 px-4 rounded-full">
+                            <i class="fa-solid fa-laptop-code text-4xl"></i>
+                        </button>
+                    </div> -->
+                    </div>
+                    <a href="../bootstrap/index.html"
+                        class="mt-4 bg-gray-800 text-white font-bold py-2 px-4 rounded-full duration-200 hover:bg-gray-400 ml-12 tracking-wide">
+                        Learn More <i class="fa-solid fa-arrow-pointer"></i>
+                    </a>
+                </div>
+
+                <div>
+                    <div class="h-60 w-60 sm:p-8 rounded-full border border-1 text-center overflow-hidden">
+                        <div class="font-inter font-extrabold text-2xl text-gray-600 tracking-wide flex justify-center">
+                            Pure
+                        </div>
+                        <img src="pure.png" class="image-programming mt-10">
+                        <!-- <div class="flex justify-center">
+                        <button class="mt-7 bg-gray-800 text-white font-bold py-2 px-4 rounded-full">
+                            <i class="fa-solid fa-laptop-code text-4xl"></i>
+                        </button>
+                    </div> -->
+                    </div>
+                    <a href="../pure/index.html"
+                        class="mt-4 bg-gray-800 text-white font-bold py-2 px-4 rounded-full duration-200 hover:bg-gray-400 ml-12 tracking-wide">
+                        Learn More <i class="fa-solid fa-arrow-pointer"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

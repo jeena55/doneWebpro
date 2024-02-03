@@ -1,0 +1,599 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="uft-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <div class="colse-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="menu">
+            <div class="item"><a href="../index.html"><i class="fa-solid fa-house"></i>Introduction</a></div>
+            <div class="item"><a href="../programming/index.html"><i class="fa-solid fa-code-branch"></i>Programming Language</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>HTML<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../html/index.html"><i class="sub-item">What is HTML?</i></a>
+                    <a href="../sencha/index.html"><i class="sub-item">Sencha Touch</i></a>
+                    <a href="../foundation/index.html"><i class="sub-item">Foundation</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>CSS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../css/index.html"><i class="sub-item">What is CSS?</i></a>
+                    <a href="../bootstrap/index.html"><i class="sub-item">Bootstrap</i></a>
+                    <a href="../pure/index.html"><i class="sub-item">Pure</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>JS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../js/index.html"><i class="sub-item">What is JS?</i></a>
+                    <a href="../agular/index.html"><i class="sub-item">Angular</i></a>
+                </div>
+            </div>
+            <div class="item"><a href="../link/index.html"><i class="fa-solid fa-link"></i>Link References</a></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            $('.menu-btn').click(function () {
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css('visibility', 'hidden');
+            });
+
+            $('.colse-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css('visibility', 'visible');
+            });
+
+        });
+    </script>
+
+    <section class="main flex flex-col space-y-8">
+        <div class="flex justify-center">
+            <a href="../index.html" class="m-4 bg-black text-white font-bold py-2 px-4 rounded  duration-200 hover:bg-gray-400">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        <h1 class="text-6xl flex justify-center" style="color: rgb(0, 0, 0);"><b>What is HTML?</b></h1>
+
+        <div class="mt-10 max-w-lg mx-auto">
+            <div class="bg-gray-200 p-4 sm:p-8 rounded-lg">
+                <p class="leading-7 text-slate-500 text-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            HTML is at the core of every web page, regardless the complexity of a site or
+                            number of technologies involved. It&#39;s an essential skill for any web
+                            professional. It&#39;s the starting point for anyone learning how to create content
+                            for the web. And, luckily for us, it&#39;s surprisingly easy to learn.
+                        </font>
+                    </font>
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);"><b>How does HTML work?</b></h2>
+
+        <div class="ml-10">
+            <ol class="items-center sm:flex">
+                <li class="relative mb-6 sm:mb-0">
+                    <div class="flex items-center">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-100 sm:ring-8 dark:ring-gray-700 shrink-0">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="hidden sm:flex bg-gray-200 h-0.5 dark:bg-gray-800"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <p class="ml-10 text-base font-normal text-gray-500 dark:text-gray-700">
+                            HTML stands for HyperText Markup Language. &quot;Markup language&quot; means
+                            that, rather than using a programming language to perform functions,
+                            HTML uses tags to identify different types of content and the purposes they
+                            each serve to the webpage.
+                        </p>
+                    </div>
+                </li>
+                <li class="relative mb-6 sm:mb-0">
+                    <div class="flex items-center">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-100 sm:ring-8 dark:ring-gray-700 shrink-0">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="hidden sm:flex bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <p class="ml-10 text-base font-normal text-gray-500 dark:text-gray-800">
+                            Let me show you what I mean. Take a look at the article below. If I were to ask
+                            you to label the types of content on the page, you&#39;d probably do pretty well:
+                            There&#39;s the header at the top, then a subheader below it, the body text, and
+                            some images at the bottom followed by a few more bits of text.
+                        </p>
+                    </div>
+                </li>
+                <li class="relative mb-6 sm:mb-0">
+                    <div class="flex items-center">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-100 sm:ring-8 dark:ring-gray-700 shrink-0">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="hidden sm:flex bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <p class="ml-10 text-base font-normal text-gray-500 dark:text-gray-800">
+                            Markup languages work in the same way as you just did when you labeled those
+                            content types, except they use code to do it -- specifically, they use HTML tags, also
+                            known as &quot;elements.&quot; These tags have pretty intuitive names: Header tags,
+                            paragraph
+                            tags, image tags, and so on.
+                        </p>
+                    </div>
+                </li>
+                <li class="relative mb-6 sm:mb-0">
+                    <div class="flex items-center">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-100 sm:ring-8 dark:ring-gray-700 shrink-0">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="hidden sm:flex bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <p class="ml-10 text-base font-normal text-gray-500 dark:text-gray-800">
+                            Every web page is made up of a bunch of these HTML tags denoting each type of
+                            content on the page. Each type of content on the page is &quot;wrapped&quot; in, i.e.
+                            surrounded by, HTML tags.
+                        </p>
+                    </div>
+                </li>
+            </ol>
+
+
+
+        </div>
+        <div class="grid grid-cols-2 gap-8 ml-10 mr-10">
+            <div class="mt-10 max-w-lg mx-auto">
+                <div class="overflow-x-auto rounded-lg">
+                    <table class="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-2xl">
+                                    Tag
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-2xl">
+                                    Description
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;!--...--&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a comment
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;!DOCTYPE&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines the document type
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;a&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a hyperlink
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;area&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines an area inside an image map
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;article&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines an article
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;b&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines bold text
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;blockquote&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a section that is quoted from another source
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;body&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines the document's body
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;br&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a single line break
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;button&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a clickable button
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;caption&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a table caption
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;div&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a section in a document
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;form&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines an HTML form for user input
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;h1&gt; to &lt;h6&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines HTML headings
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;head&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Contains metadata/information for the document
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+            </div>
+            <div class="mt-10 max-w-lg mx-auto">
+                <div class="overflow-x-auto rounded-lg">
+                    <table class="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-2xl">
+                                    Tag
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-2xl">
+                                    Description
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;html&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines the root of an HTML document
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;i&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a part of text in an alternate voice or mood
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;img&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines an image
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;input&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines an input control
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;label&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a label&nbsp;for an &lt;input&gt; element
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;li&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a list item
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;meta&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines metadata about an HTML document
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;main&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Specifies the main content of a document
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;ol&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines an ordered list
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;option&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines an option in a drop-down list
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;p&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a paragraph
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;script&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a client-side script
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;section&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a section in a document
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;table&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a table
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    &lt;textarea&gt;
+                                </th>
+                                <td class="px-6 py-2">
+                                    Defines a multiline input control (text area)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);"><b>For Example:</b></h2>
+
+        <div class="ml-10 mr-10">
+            <div class="max-w-3xl mx-auto">
+                <div class="p-4 sm:p-8 rounded-lg">
+                    <p class="leading-7 text-slate-500 text-center">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                HTML elements are hierarchical, which means that they can be nested inside each other to
+                                create a tree-like structure of the content on the web page.
+                                This hierarchical structure is called the DOM (Document Object Model),
+                                and it is used by the web browser to render the web page. For example,
+                            </font>
+                        </font>
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-lg mx-auto">
+                <img src="carbon.png">
+            </div>
+        </div>
+
+        <br>
+
+
+
+        <div class="bg-gray-200">
+            <h2 class="mt-10 text-4xl flex justify-center text-slate-700"><b>HTML element</b></h2>
+            <div class="mt-10 max-w-lg mx-auto">
+                <img src="element.png">
+            </div>
+            <div class="mx-auto">
+                <div class="p-4 sm:p-8 rounded flex justify-center">
+                    <ul
+                        class="w-50 text-sm font-medium text-gray-300 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                        <li class="px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600 tracking-wide">
+                            <b>The opening tag:</b> This consists of the element name, wrapped in angle brackets. It
+                            indicates the start of the element and the point at which the element's effects begin.</li>
+                        <li class="px-4 py-2 border-b border-gray-200 dark:border-gray-600 tracking-wide"><b>The closing
+                                tag:</b> This is the same as the opening tag, but with a forward slash before the
+                            element name. It indicates the end of the element and the point at which the element's
+                            effects stop.</li>
+                        <li class="px-4 py-2 border-b border-gray-200 dark:border-gray-600 tracking-wide"><b>The
+                                content:</b> This is the content of the element, which can be text, other elements, or a
+                            combination of both.</li>
+                        <li class="px-4 py-2 rounded-b-lg tracking-wide"><b>The element:</b> The opening tag, the
+                            closing tag, and the content together make up the element.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);"><b>Framework</b></h2>
+
+        <div class="flex justify-center">
+            <div id="fw-html" class="grid grid-cols-2 gap-8">
+                <div>
+                    <div class="h-60 w-60 p-4 sm:p-8 rounded-full border border-1 text-center overflow-hidden">
+                        <div class="font-inter font-extrabold text-2xl text-gray-600 tracking-wide flex justify-center">
+                            Sencha Touch
+                        </div>
+                        <img src="sencha.png" class="image-programming max-w-lg mx-auto w-50 h-30">
+                        <!-- <div class="flex justify-center">
+                        <button class="mt-7 bg-gray-800 text-white font-bold py-2 px-4 rounded-full">
+                            <i class="fa-solid fa-laptop-code text-4xl"></i>
+                        </button>
+                    </div> -->
+                    </div>
+                    <a href="../sencha/index.html"
+                        class="mt-4 bg-gray-800 text-white font-bold py-2 px-4 rounded-full duration-200 hover:bg-gray-400 ml-12 tracking-wide">
+                        Learn More <i class="fa-solid fa-arrow-pointer"></i>
+                    </a>
+                </div>
+
+                <div>
+                    <div class="h-60 w-60 sm:p-8 rounded-full border border-1 text-center overflow-hidden">
+                        <div class="font-inter font-extrabold text-2xl text-gray-600 tracking-wide flex justify-center">
+                            Foundation
+                        </div>
+                        <img src="foundation.png" class="image-programming">
+                        <!-- <div class="flex justify-center">
+                        <button class="mt-7 bg-gray-800 text-white font-bold py-2 px-4 rounded-full">
+                            <i class="fa-solid fa-laptop-code text-4xl"></i>
+                        </button>
+                    </div> -->
+                    </div>
+                    <a href="../foundation/index.html"
+                        class="mt-4 bg-gray-800 text-white font-bold py-2 px-4 rounded-full duration-200 hover:bg-gray-400 ml-12 tracking-wide">
+                        Learn More <i class="fa-solid fa-arrow-pointer"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+    </section>
+
+</body>
+
+</html>

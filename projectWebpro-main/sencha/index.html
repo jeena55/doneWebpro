@@ -1,0 +1,293 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sencha Touch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="uft-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <div class="colse-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="menu">
+            <div class="item"><a href="../index.html"><i class="fa-solid fa-house"></i>Introduction</a></div>
+            <div class="item"><a href="../programming/index.html"><i class="fa-solid fa-code-branch"></i>Programming Language</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>HTML<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../html/index.html"><i class="sub-item">What is HTML?</i></a>
+                    <a href="../sencha/index.html"><i class="sub-item">Sencha Touch</i></a>
+                    <a href="../foundation/index.html"><i class="sub-item">Foundation</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>CSS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../css/index.html"><i class="sub-item">What is CSS?</i></a>
+                    <a href="../bootstrap/index.html"><i class="sub-item">Bootstrap</i></a>
+                    <a href="../pure/index.html"><i class="sub-item">Pure</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>JS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../js/index.html"><i class="sub-item">What is JS?</i></a>
+                    <a href="../agular/index.html"><i class="sub-item">Angular</i></a>
+                </div>
+            </div>
+            <div class="item"><a href="../link/index.html"><i class="fa-solid fa-link"></i>Link References</a></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            $('.menu-btn').click(function () {
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css('visibility', 'hidden');
+            });
+
+            $('.colse-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css('visibility', 'visible');
+            });
+
+        });
+    </script>
+
+
+    <section class="main flex flex-col space-y-8">
+        <div class="flex justify-center">
+            <a href="../index.html" class="m-4 bg-black text-white font-bold py-2 px-4 rounded  duration-200 hover:bg-gray-400">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        <h1 class="text-6xl flex justify-center" style="color: rgb(0, 0, 0);"><b>Sencha Touch</b></h1>
+
+        <img src="/html/sencha.png" class="mx-auto" style="width: 150px;">
+
+        <div class="mt-10 max-w-lg mx-auto">
+            <div class="bg-gray-200 p-4 sm:p-8 rounded-lg">
+                <p class="leading-7 text-slate-500 text-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Sencha Touch is a renowned cross-platform compatible remarkable web front-end
+                            framework. It is commonly exploited by developers to develop mobile-first applications
+                            for the users. Sencha Touch can be used by developers to include a number of user
+                            interfaces that make applications more attractive and engaging for the users.
+                        </font>
+                    </font>
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);">Widget components and customisable themes
+        </h2>
+
+        <ul class="space-y-4 text-left text-gray-600 dark:text-gray-600 mx-auto">
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>Buttons with device specific themes and effects</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>Form elements such as text fields for email</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>Date picker and address</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>Sliders, selectors, and combo-boxes</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>A list component with momentum-scrolling and an index bar</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>A minimal icon set</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>Toolbars and menusToolbars and menus</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>Movable tabs, bottom toolbars</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>A map component with support for multi-touch gestures such as pinch and zoom</span>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+                <span>Carousels</span>
+            </li>
+        </ul>
+
+        <br>
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);">Basic application directory structure</h2>
+
+
+        <div class="mt-10 p-40 py-2 mx-auto">
+            <table class="rounded-lg w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="text-lg px-6 py-3">
+                            Directory/File
+                        </th>
+                        <th scope="col" class="text-lg px-6 py-3">
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            app
+                        </th>
+                        <td class="px-6 py-4">
+                            The main directory that holds the app's models, views, controllers, stores and profiles
+                    </tr>
+                    <tr
+                        class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            app.js
+                        </th>
+                        <td class="px-6 py-4">
+                            File that holds the application's overall settings. References to all models, views, controllers, 
+                            stores and profiles can be found here. Once these references are loaded, the main app launch function 
+                            is called. This function loads the first view and hence can be considered as the first point of the application
+                        </td>
+                    </tr>
+                    <tr
+                        class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            index.html
+                        </th>
+                        <td class="px-6 py-4">
+                            Main HTML file for the app. It may span many pages/screens for the mobile app
+                        </td>
+                    </tr>
+                    <tr
+                        class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            resources
+                        </th>
+                        <td class="px-6 py-4">
+                            Directory that holds all the images, CSS and any other external file that the app needs
+                        </td>
+                    </tr>
+                    <tr
+                        class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            app.json
+                        </th>
+                        <td class="px-6 py-4">
+                            App's configuration file
+                    </tr>
+                    <tr
+                        class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            packager.json
+                        </th>
+                        <td class="px-6 py-4">
+                            File used to create native packages
+                        </td>
+                    </tr>
+                    <tr
+                        class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            ext-touch.js
+                        </th>
+                        <td class="px-6 py-4">
+                            This is Sencha's JavaScript library (ext-touchdebug.js recommended during development phase)
+                        </td>
+                    </tr>
+                    <tr
+                        class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            ext-touch.css
+                        </th>
+                        <td class="px-6 py-4">
+                            This is Sencha's CSS library
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);">Sample usage</h2>
+        <img src="carbon.png" class="mx-auto" style="width: 550px;">
+
+    </section>
+</body>
+
+</html>

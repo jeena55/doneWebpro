@@ -1,0 +1,302 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="uft-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <div class="colse-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="menu">
+            <div class="item"><a href="../index.html"><i class="fa-solid fa-house"></i>Introduction</a></div>
+            <div class="item"><a href="../programming/index.html"><i class="fa-solid fa-code-branch"></i>Programming Language</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>HTML<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../html/index.html"><i class="sub-item">What is HTML?</i></a>
+                    <a href="../sencha/index.html"><i class="sub-item">Sencha Touch</i></a>
+                    <a href="../foundation/index.html"><i class="sub-item">Foundation</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>CSS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../css/index.html"><i class="sub-item">What is CSS?</i></a>
+                    <a href="../bootstrap/index.html"><i class="sub-item">Bootstrap</i></a>
+                    <a href="../pure/index.html"><i class="sub-item">Pure</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>JS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../js/index.html"><i class="sub-item">What is JS?</i></a>
+                    <a href="../agular/index.html"><i class="sub-item">Angular</i></a>
+                </div>
+            </div>
+            <div class="item"><a href="../link/index.html"><i class="fa-solid fa-link"></i>Link References</a></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            $('.menu-btn').click(function () {
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css('visibility', 'hidden');
+            });
+
+            $('.colse-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css('visibility', 'visible');
+            });
+
+        });
+    </script>
+
+    <section class="main flex flex-col space-y-8">
+        <div class="flex justify-center">
+            <a href="../index.html" class="m-4 bg-black text-white font-bold py-2 px-4 rounded  duration-200 hover:bg-gray-400">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        <h1 class="text-6xl flex justify-center" style="color: rgb(0, 0, 0);"><b>Bootstrap</b></h1>
+
+        <img src="bootstrap.png" class="mx-auto" style="width: 400px;">
+
+        <div class="mt-5 max-w-6xl mx-auto">
+            <div class="bg-gray-200 p-4 sm:p-8 rounded-lg">
+                <p class="leading-7 text-slate-500 text-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Bootstrap, a sleek &amp; intuitive CSS framework, designed to be mobile first is a robust
+                            framework that boasts of multiple CSS, JS and other front files that kick start the web
+                            and app development task. There are different components in Bootstrap that helps in
+                            the creation of drop down menu, alert boxes, and several such other features. Therefore,
+                            Bootstrap is a comprehensive solution for mobile application developers who need the
+                            entire solution.
+                        </font>
+                    </font>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-9 mx-auto">
+            <div>
+                <div class="p-5 max-w-2xl">
+                    <i
+                        class="fa-solid fa-boxes-packing mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900"></i>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-600">Install via
+                        package manager</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">JavaScript is a more complicated
+                        Install Bootstrap's source Sass and JavaScript files via npm, RubyGems, Composer, or Meteor.
+                        Package managed installs
+                        don't include documentation or our full build scripts. You can also use any demo from our
+                        Examples repo to quickly jumpstart Bootstrap projects.</p>
+                    <input type="hidden" id="hs-clipboard-tooltip" value="npm install preline">
+
+                    <button type="button"
+                        class="js-clipboard [--trigger:focus] hs-tooltip relative py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-clipboard-target="#hs-clipboard-tooltip" data-clipboard-action="copy"
+                        data-clipboard-success-text="Copied">
+                        $ npm install bootstrap@5.3.2
+                        <span class="border-s ps-3.5 dark:border-gray-700">
+                            <svg class="js-clipboard-default w-4 h-4 group-hover:rotate-6 transition"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                            </svg>
+
+                            <svg class="js-clipboard-success hidden w-4 h-4 text-blue-600 rotate-6"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </span>
+
+                        <span
+                            class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity hidden invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-lg shadow-sm dark:bg-slate-700"
+                            role="tooltip">
+                            Copied
+                        </span>
+                    </button>
+
+                    <button type="button"
+                        class="js-clipboard [--trigger:focus] hs-tooltip relative py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-clipboard-target="#hs-clipboard-tooltip" data-clipboard-action="copy"
+                        data-clipboard-success-text="Copied">
+                        $ gem install bootstrap -v 5.3.2
+                        <span class="border-s ps-3.5 dark:border-gray-700">
+                            <svg class="js-clipboard-default w-4 h-4 group-hover:rotate-6 transition"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                            </svg>
+
+                            <svg class="js-clipboard-success hidden w-4 h-4 text-blue-600 rotate-6"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </span>
+
+                        <span
+                            class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity hidden invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-lg shadow-sm dark:bg-slate-700"
+                            role="tooltip">
+                            Copied
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="p-5 max-w-2xl">
+                    <i
+                        class="fa-solid fa-globe mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900"></i>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-600">Include via CDN
+                    </h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">When you only need to include
+                        Bootstrap's compiled CSS or JS, you can use jsDelivr. See it
+                        in action with our simple quick start, or browse the examples to jumpstart your next project.
+                        You can also choose to include Popper and our JS separately.</p>
+
+                    <button type="button"
+                        class="js-clipboard [--trigger:focus] hs-tooltip relative py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-clipboard-target="#hs-clipboard-tooltip" data-clipboard-action="copy"
+                        data-clipboard-success-text="Copied">
+                        <span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"</span>
+                        <span class="border-s ps-3.5 dark:border-gray-700">
+                            <svg class="js-clipboard-default w-4 h-4 group-hover:rotate-6 transition"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                            </svg>
+
+                            <svg class="js-clipboard-success hidden w-4 h-4 text-blue-600 rotate-6"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </span>
+
+                        <span
+                            class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity hidden invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-lg shadow-sm dark:bg-slate-700"
+                            role="tooltip">
+                            Copied
+                        </span>
+                    </button>
+
+                    <button type="button"
+                        class="mt-2 js-clipboard [--trigger:focus] hs-tooltip relative py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-clipboard-target="#hs-clipboard-tooltip" data-clipboard-action="copy"
+                        data-clipboard-success-text="Copied">
+                        <span
+                            class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"</span>
+                        <span class="border-s ps-3.5 dark:border-gray-700">
+                            <svg class="js-clipboard-default w-4 h-4 group-hover:rotate-6 transition"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                            </svg>
+
+                            <svg class="js-clipboard-success hidden w-4 h-4 text-blue-600 rotate-6"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </span>
+
+                        <span
+                            class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity hidden invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-lg shadow-sm dark:bg-slate-700"
+                            role="tooltip">
+                            Copied
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);">Build and extend in real-time with CSS
+            variables</h2>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="p-4 sm:p-4 rounded-lg">
+                <p class="leading-7 text-slate-600 text-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Bootstrap 5 is evolving with each release to better utilize CSS variables for global theme
+                            styles, individual components, and even utilities.
+                            We provide dozens of variables for colors, font styles, and more at a :root level for use
+                            anywhere. On components and utilities, CSS variables
+                            are scoped to the relevant class and can easily be modified.
+                        </font>
+                    </font>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-7 mx-auto">
+            <div>
+                <div class="p-8 max-w-2xl bg-gray-100 rounded-lg">
+                    <h5 class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-black text-center">Using CSS variables</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-600">Use any of our global :root variables to write new styles. 
+                        CSS variables use the var(--bs-variableName) syntax and can be inherited by children elements.</p>
+                    <img src="carbon.png" class="mx-auto" style="width: 350px;">
+                </div>
+            </div>
+
+            <div>
+                <div class="p-8 max-w-2xl bg-gray-100 rounded-lg">
+                    <h5 class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-black text-center">Customizing via CSS variables</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-600">Override global, component, or utility class variables to customize 
+                        Bootstrap just how you like. No need to redeclare each rule, just a new variable value.</p>
+                        <img src="carbon (1).png" class="mx-auto" style="width: 400px;">
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWeb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="uft-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <div class="colse-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="menu">
+            <div class="item"><a href="index.html"><i class="fa-solid fa-house"></i>Introduction</a></div>
+            <div class="item"><a href="../programming/index.html"><i class="fa-solid fa-code-branch"></i>Programming Language</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>HTML<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../html/index.html"><i class="sub-item">What is HTML?</i></a>
+                    <a href="../sencha/index.html"><i class="sub-item">Sencha Touch</i></a>
+                    <a href="../foundation/index.html"><i class="sub-item">Foundation</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>CSS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../css/index.html"><i class="sub-item">What is CSS?</i></a>
+                    <a href="../bootstrap/index.html"><i class="sub-item">Bootstrap</i></a>
+                    <a href="../pure/index.html"><i class="sub-item">Pure</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>JS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../js/index.html"><i class="sub-item">What is JS?</i></a>
+                    <a href="../agular/index.html"><i class="sub-item">Angular</i></a>
+                </div>
+            </div>
+            <div class="item"><a href="../link/index.html"><i class="fa-solid fa-link"></i>Link References</a></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            $('.menu-btn').click(function () {
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css('visibility', 'hidden');
+            });
+
+            $('.colse-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css('visibility', 'visible');
+            });
+
+        });
+    </script>
+
+    <section class="main flex flex-col space-y-8">
+        <div class="flex justify-center">
+            <a href="index.html" class="m-4 bg-black text-white font-bold py-2 px-4 rounded duration-200 hover:bg-gray-400">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+        <h1 class="text-6xl flex justify-center" style="color: rgb(0, 0, 0);"><b>Introduction</b></h1>
+        <div class="mt-10 max-w-lg mx-auto">
+            <div class="bg-white p-4 sm:p-8 rounded-lg">
+                <div class="font-inter font-extrabold text-3xl text-black tracking-tight">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Welcome everyone to our website!</font>
+                    </font>
+                </div>
+                <div class="mt-1 font-medium text-sm text-slate-500">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">65070038 Jeena Kerdkaew</font>
+                    </font>
+                </div>
+                <p class="mt-4 leading-7 text-slate-500">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">We are proud to introduce and explain
+                            the key programming languages that play a crucial role on this website.
+                            Please take a moment to familiarize yourself with HTML, CSS, and JavaScript,
+                            which are fundamental languages used in building and designing our website.</font>
+                    </font>
+                </p>
+            </div>
+        </div>
+        <div class="grid grid-cols-4 gap-3 ml-10">
+            <div class="m-1 p-4 sm:p-8 rounded-lg ">
+                <div class="font-inter font-extrabold text-2xl text-black tracking-wide flex justify-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">What is Programming Language?</font>
+                    </font>
+                </div>
+                <img src="programming.png" class="image-programming">
+                <div class="flex justify-center">
+                    <a href="../programming/index.html"
+                        class="mt-4 bg-gray-800 text-white font-bold py-2 px-4 rounded-full duration-200 hover:bg-gray-400">
+                        Learn More <i class="fa-solid fa-arrow-pointer"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="m-1 p-4 sm:p-8 rounded-lg ">
+                <div class="font-inter font-extrabold text-2xl text-black tracking-wide flex justify-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">HTML</font>
+                    </font>
+                </div>
+                <img src="html.png" class="html object-fill image-programming w-40 h-45 mx-auto my-5">
+                <div class="flex justify-center">
+                    <a href="../html/index.html"
+                        class="mt-4 bg-gray-800 text-white font-bold py-2 px-4 rounded-full duration-200 hover:bg-gray-400">
+                        Learn More <i class="fa-solid fa-arrow-pointer"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="m-1 p-4 sm:p-8 rounded-lg ">
+                <div class="font-inter font-extrabold text-2xl text-black tracking-wide flex justify-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">CSS</font>
+                    </font>
+                </div>
+                <img src="css.png" class="css object-fill image-programming w-40 h-45 object-fill mx-auto my-5">
+                <div class="flex justify-center">
+                    <a href="../css/index.html"
+                        class="mt-4 bg-gray-800 text-white font-bold py-2 px-4 rounded-full duration-200 hover:bg-gray-400">
+                        Learn More <i class="fa-solid fa-arrow-pointer"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="m-1 p-4 sm:p-8 rounded-lg ">
+                <div class="font-inter font-extrabold text-2xl text-black tracking-wide flex justify-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">JS</font>
+                    </font>
+                </div>
+                <img src="js.png" class="js object-fill image-programming w-40 h-45 mx-auto my-5">
+                <div class="flex justify-center">
+                    <a href="../js/index.html"
+                        class="mt-4 bg-gray-800 text-white font-bold py-2 px-4 rounded-full duration-200 hover:bg-gray-400">
+                        Learn More <i class="fa-solid fa-arrow-pointer"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 max-w-lg mx-auto">
+            <div class="bg-gray-200 p-4 sm:p-8 rounded-lg">
+                <div class="font-inter font-extrabold text-3xl text-black tracking-tight flex justify-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Framework</font>
+                    </font>
+                </div>
+                <p class="mt-6 leading-7 text-slate-500 text-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Additionally, we provide explanations about the
+                            frameworks used with each language.
+                            This will help you understand how to efficiently use and customize your website.
+                            If you have any further questions, please feel free to contact us.
+                            <br><b>Thank you for visiting our website!</b>
+                        </font>
+                    </font>
+                </p>
+            </div>
+        </div>
+
+        <br>
+
+
+
+    </section>
+
+
+
+</body>
+
+</html>

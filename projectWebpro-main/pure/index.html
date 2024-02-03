@@ -1,0 +1,178 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="uft-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <div class="colse-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="menu">
+            <div class="item"><a href="../index.html"><i class="fa-solid fa-house"></i>Introduction</a></div>
+            <div class="item"><a href="../programming/index.html"><i class="fa-solid fa-code-branch"></i>Programming
+                    Language</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>HTML<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../html/index.html"><i class="sub-item">What is HTML?</i></a>
+                    <a href="../sencha/index.html"><i class="sub-item">Sencha Touch</i></a>
+                    <a href="../foundation/index.html"><i class="sub-item">Foundation</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>CSS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../css/index.html"><i class="sub-item">What is CSS?</i></a>
+                    <a href="../bootstrap/index.html"><i class="sub-item">Bootstrap</i></a>
+                    <a href="../pure/index.html"><i class="sub-item">Pure</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>JS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../js/index.html"><i class="sub-item">What is JS?</i></a>
+                    <a href="../agular/index.html"><i class="sub-item">Angular</i></a>
+                </div>
+            </div>
+            <div class="item"><a href="../link/index.html"><i class="fa-solid fa-link"></i>Link References</a></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            $('.menu-btn').click(function () {
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css('visibility', 'hidden');
+            });
+
+            $('.colse-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css('visibility', 'visible');
+            });
+
+        });
+    </script>
+
+
+
+    <section class="main flex flex-col space-y-8">
+        <div class="flex justify-center">
+            <a href="../index.html" class="m-4 bg-black text-white font-bold py-2 px-4 rounded  duration-200 hover:bg-gray-400">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        <h1 class="text-6xl flex justify-center" style="color: rgb(0, 0, 0);"><b>Pure</b></h1>
+        <div class="flex justify-center mt-1">
+            <img src="../css/pure.png">
+        </div>
+
+        <br><br>
+
+        <div class="max-w-6xl mx-auto p-4 sm:p-8 rounded-lg bg-gray-200">
+            <p class="mr-10 ml-10 leading-7 text-slate-500 text-center">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">
+                        Pure is a simple framework with a single stylesheet file. In spite of the file being
+                        lightweight, it has some of the most extraordinary designs for website development.
+
+                        Pure provides a set of small but responsive CSS modules that make it much easier to
+                        include a variety of options in web development projects. Pure is the perfect framework
+                        for users who wish to include specific features in their projects, rather than focusing on
+                        full-featured frameworks.
+                    </font>
+                </font>
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+            <ol class="items-center sm:flex gap-10">
+                <li class="relative mb-6 sm:mb-0">
+                    <div class="flex items-center">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-100 sm:ring-8 dark:ring-gray-700 shrink-0">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="hidden sm:flex bg-gray-200 h-0.5 dark:bg-gray-800"></div>
+                        <h3 class="ml-5 text-lg font-semibold text-gray-900 dark:text-gray-600">Your CSS foundation.
+                        </h3>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <p class="ml-10 text-base font-normal text-gray-500 dark:text-gray-700">
+                            Pure builds on Normalize.css and provides layout and styling for native HTML elements, plus
+                            the most common UI components. It's what you need, without the cruft.
+                        </p>
+                    </div>
+                </li>
+                <li class="relative mb-6 sm:mb-0">
+                    <div class="flex items-center">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-100 sm:ring-8 dark:ring-gray-700 shrink-0">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="hidden sm:flex bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        <h3 class="ml-5 text-lg font-semibold text-gray-900 dark:text-gray-600">Made with mobile in
+                            mind.</h3>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <p class="ml-10 text-base font-normal text-gray-500 dark:text-gray-800">
+                            Pure is responsive out of the box, so elements look great on all screen sizes.
+                        </p>
+                    </div>
+                </li>
+                <li class="relative mb-6 sm:mb-0">
+                    <div class="flex items-center">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-100 sm:ring-8 dark:ring-gray-700 shrink-0">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="hidden sm:flex bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        <h3 class="ml-5 text-lg font-semibold text-gray-900 dark:text-gray-600">Stays out of your way.
+                        </h3>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <p class="ml-10 text-base font-normal text-gray-500 dark:text-gray-800">
+                            Pure has minimal styles and encourages you to write your application styles on top of it.
+                            It's designed to get out of your way and makes it easy to override styles.
+                        </p>
+                    </div>
+                </li>
+            </ol>
+
+            
+
+
+
+        </div>
+
+        <br>
+
+
+    </section>
+</body>
+
+</html>

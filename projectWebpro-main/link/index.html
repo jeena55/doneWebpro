@@ -1,0 +1,203 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="uft-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <div class="colse-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="menu">
+            <div class="item"><a href="../index.html"><i class="fa-solid fa-house"></i>Introduction</a></div>
+            <div class="item"><a href="../programming/index.html"><i class="fa-solid fa-code-branch"></i>Programming
+                    Language</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>HTML<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../html/index.html"><i class="sub-item">What is HTML?</i></a>
+                    <a href="../sencha/index.html"><i class="sub-item">Sencha Touch</i></a>
+                    <a href="../foundation/index.html"><i class="sub-item">Foundation</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>CSS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../css/index.html"><i class="sub-item">What is CSS?</i></a>
+                    <a href="../bootstrap/index.html"><i class="sub-item">Bootstrap</i></a>
+                    <a href="../pure/index.html"><i class="sub-item">Pure</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>JS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../js/index.html"><i class="sub-item">What is JS?</i></a>
+                    <a href="../agular/index.html"><i class="sub-item">Angular</i></a>
+                </div>
+            </div>
+            <div class="item"><a href="../link/index.html"><i class="fa-solid fa-link"></i>Link References</a></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            $('.menu-btn').click(function () {
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css('visibility', 'hidden');
+            });
+
+            $('.colse-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css('visibility', 'visible');
+            });
+
+        });
+    </script>
+
+    <section class="main flex flex-col space-y-8">
+        <div class="flex justify-center">
+            <a href="../index.html" class="m-4 bg-black text-white font-bold py-2 px-4 rounded  duration-200 hover:bg-gray-400">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        <h1 class="text-6xl flex justify-center" style="color: rgb(0, 0, 0);"><b>Link References</b></h1>
+
+        <ul class="space-y-4 text-left text-gray-600 dark:text-gray-600 mx-auto">
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+
+                <a href="https://www.clariontech.com/blog/most-popular-js-css-html-front-end-frameworks-for-design-and-development"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    https://www.clariontech.com/bl
+                    og/most-popular-js-css-html-
+
+                    front-end-frameworks-for-
+                    design-and-development
+                </a>
+
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://blog.hubspot.com/marketing/web-design-html-css-javascript" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    https://blog.hubspot.com/mark
+                    eting/web-design-html-css-
+                    javascript</a>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics</a>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://purecss.io/" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">https://purecss.io/</a>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://angular.io/" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">https://angular.io/</a>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    https://developer.mozilla.org/en-US/docs/Learn/CSS</a>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics</a>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://www.w3schools.com/html/" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">https://www.w3schools.com/html/</a>
+            </li>
+
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://getbootstrap.com/" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    https://getbootstrap.com/</a>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://www.tutorialspoint.com/sencha_touch/sencha_touch_overview.htm" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    https://www.tutorialspoint.com/sencha_touch/sencha_touch_overview.htm</a>
+            </li>
+            <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-blue-500" aria-hidden="true"
+                    xmlns="https://get.foundation/" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5.917 5.724 10.5 15 1.5"></path>
+                </svg>
+                <a href="https://get.foundation/" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">https://www.w3schools.com/html/</a>
+            </li>
+
+        </ul>
+    </section>
+
+
+</body>
+
+</html>

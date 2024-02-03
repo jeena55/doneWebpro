@@ -1,0 +1,247 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="uft-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <div class="colse-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="menu">
+            <div class="item"><a href="../index.html"><i class="fa-solid fa-house"></i>Introduction</a></div>
+            <div class="item"><a href="../programming/index.html"><i class="fa-solid fa-code-branch"></i>Programming
+                    Language</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>HTML<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../html/index.html"><i class="sub-item">What is HTML?</i></a>
+                    <a href="../sencha/index.html"><i class="sub-item">Sencha Touch</i></a>
+                    <a href="../foundation/index.html"><i class="sub-item">Foundation</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>CSS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../css/index.html"><i class="sub-item">What is CSS?</i></a>
+                    <a href="../bootstrap/index.html"><i class="sub-item">Bootstrap</i></a>
+                    <a href="../pure/index.html"><i class="sub-item">Pure</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <a class="sub-btn"><i class="fa-solid fa-file-code"></i>JS<i
+                        class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="../js/index.html"><i class="sub-item">What is JS?</i></a>
+                    <a href="../agular/index.html"><i class="sub-item">Angular</i></a>
+                </div>
+            </div>
+            <div class="item"><a href="../link/index.html"><i class="fa-solid fa-link"></i>Link References</a></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            $('.menu-btn').click(function () {
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css('visibility', 'hidden');
+            });
+
+            $('.colse-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css('visibility', 'visible');
+            });
+
+        });
+    </script>
+
+    <section class="main flex flex-col space-y-8">
+        <div class="flex justify-center">
+            <a href="../index.html" class="m-4 bg-black text-white font-bold py-2 px-4 rounded  duration-200 hover:bg-gray-400">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        <h1 class="text-6xl flex justify-center" style="color: rgb(0, 0, 0);"><b>What is Javascript?</b></h1>
+
+        <div class="mt-5 max-w-6xl mx-auto">
+            <div class="bg-gray-200 p-4 sm:p-8 rounded-lg">
+                <p class="leading-7 text-slate-500 text-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            JavaScript is a logic-based programming language that can be used to modify
+                            website content and make it behave in different ways in response to a user&#39;s
+                            actions. Common uses for JavaScript include confirmation boxes, calls-to-
+                            action, and adding new identities to existing information.
+                        </font>
+                    </font>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-9 mx-auto">
+            <div>
+                <div class="p-5 max-w-96">
+                    <i
+                        class="fa-solid fa-wand-magic-sparkles mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-950"></i>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">JavaScript is a more complicated
+                        language than HTML or CSS, and it wasn&#39;t
+                        released in beta form until 1995. Nowadays, JavaScript is supported by all
+                        modern web browsers and is used on almost every site on the web for more
+                        powerful and complex functionality.</p>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="p-5 max-w-96">
+                    <i
+                        class="fa-solid fa-wand-magic-sparkles mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-950"></i>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">In short, JavaScript is a programming
+                        language that lets web developers
+                        design interactive sites. Most of the dynamic behavior you&#39;ll see on a web
+                        page is thanks to JavaScript, which augments a browser&#39;s default controls and
+                        behaviors.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);">A "Hello world!" example</h2>
+
+        <div class="mt-10 max-w-7xl mx-auto">
+            <div class="bg-gray-200 p-4 sm:p-8 rounded-lg">
+                <p class="leading-7 text-slate-500 text-center">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            JavaScript is one of the most popular modern web technologies! As your JavaScript skills
+                            grow, your websites will enter a new dimension of power and creativity.
+
+                            <br><br>However, getting comfortable with JavaScript is more challenging than getting
+                            comfortable with HTML and CSS. You may have to start small, and progress gradually. To
+                            begin, let's examine how to add JavaScript to your page for creating a Hello world! example.
+                            (Hello world! is the standard for introductory programming examples.)
+                        </font>
+                    </font>
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-10 max-w-lg mx-auto">
+            <div class="p-4 sm:p-8 rounded-lg">
+
+                <ol class="relative border-s border-gray-200 dark:border-gray-700">
+                    <li class="ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-500">Go to your test site and
+                            create a new folder named scripts. Within the scripts folder, create a new text document
+                            called main.js, and save it.</p>
+                    </li>
+                    <li class="mt-10 ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-500">In your index.html file, enter
+                            this code on a new line, just before the closing -/body- tag:
+                        </p>
+                        <br>
+                        <img src="carbon.png">
+                    </li>
+                    <li class="ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-500">
+                            This is doing the same job as the
+                            -link- tag element for CSS. It applies the JavaScript to the page, so it can have an effect
+                            on
+                            the HTML (along with the CSS, and anything else on the page).
+                        </p>
+                    </li>
+                    <li class="mt-10 ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-500">Add this code to the main.js
+                            file:
+                        </p>
+                        <div class="code-example">
+                            <div class="example-header"><span class="language-name">js</span><button type="button"
+                                    class="icon copy-icon" fdprocessedid="zs5rrj"><span class="visually-hidden">Copy to
+                                        Clipboard</span></button><span class="copy-icon-message visually-hidden"
+                                    role="alert"></span></div>
+                            <pre class="brush: js notranslate"
+                                data-signature="uoDoLQA8JFalzD0faw5NnlSujyRGEo5TIUiSYee2Cjg="><code><span class="token keyword">const</span> myHeading <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"h1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            myHeading<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">"Hello world!"</span><span class="token punctuation">;</span>
+                            </code></pre>
+                        </div>
+                    </li>
+                    <li class="ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-500">Make sure the HTML and
+                            JavaScript files are saved. Then load index.html in your browser. You should see something
+                            like this:
+                        </p>
+                    </li>
+                    <img src="hello-world.png" class="ml-5 rounded-lg">
+                </ol>
+            </div>
+        </div>
+
+
+        <h2 class="text-4xl flex justify-center" style="color: rgb(0, 0, 0);">Framework</h2>
+        <div class="flex justify-center">
+
+            <div>
+                <div class="h-60 w-60 p-4 sm:p-8 rounded-full border border-1 text-center overflow-hidden">
+                    <div class="font-inter font-extrabold text-2xl text-gray-600 tracking-wide flex justify-center">
+                        Bootstrap
+                    </div>
+                    <img src="agula.svg" class="image-programming max-w-lg mx-auto mt-4 w-40 h-30">
+                    <!-- <div class="flex justify-center">
+                        <button class="mt-7 bg-gray-800 text-white font-bold py-2 px-4 rounded-full">
+                            <i class="fa-solid fa-laptop-code text-4xl"></i>
+                        </button>
+                    </div> -->
+                </div>
+                <a href="../agular/index.html"
+                    class="mt-4 bg-gray-800 text-white font-bold py-2 px-4 rounded-full duration-200 hover:bg-gray-400 ml-12 tracking-wide">
+                    Learn More <i class="fa-solid fa-arrow-pointer"></i>
+            </a>
+            </div>
+
+        </div>
+
+
+        <br>
+
+    </section>
+</body>
+
+</html>
